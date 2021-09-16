@@ -1,0 +1,19 @@
+﻿@model ServiceItem
+
+@{
+    
+    ViewBag.Title = Model.MetaTitle;
+    ViewBag.MetaDescription = Model.MetaDescription;
+    ViewBag.MetaKeywords = Model.MetaKeywords;
+}
+
+<div>
+    <h2>@Model.Title</h2>
+    <h2>@Model.SubTitle</h2>
+    <div>
+        <img src="~/css/@Model.PathToImage" class="img-block" />
+    </div>
+</div>
+<div>
+    @Html.Raw(Model.Text);
+</div>
